@@ -30,9 +30,9 @@
         {
             this.btnCalculate = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtStartValue = new System.Windows.Forms.TextBox();
+            this.txtEndValue = new System.Windows.Forms.TextBox();
+            this.txtResult = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -60,26 +60,26 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "+";
             // 
-            // textBox1
+            // txtStartValue
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 21);
-            this.textBox1.TabIndex = 2;
+            this.txtStartValue.Location = new System.Drawing.Point(122, 82);
+            this.txtStartValue.Name = "txtStartValue";
+            this.txtStartValue.Size = new System.Drawing.Size(56, 21);
+            this.txtStartValue.TabIndex = 2;
             // 
-            // textBox2
+            // txtEndValue
             // 
-            this.textBox2.Location = new System.Drawing.Point(259, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 21);
-            this.textBox2.TabIndex = 3;
+            this.txtEndValue.Location = new System.Drawing.Point(259, 81);
+            this.txtEndValue.Name = "txtEndValue";
+            this.txtEndValue.Size = new System.Drawing.Size(58, 21);
+            this.txtEndValue.TabIndex = 3;
             // 
-            // textBox3
+            // txtResult
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 21);
-            this.textBox3.TabIndex = 4;
+            this.txtResult.Location = new System.Drawing.Point(122, 38);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(195, 21);
+            this.txtResult.TabIndex = 4;
             // 
             // label1
             // 
@@ -96,9 +96,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 244);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtResult);
+            this.Controls.Add(this.txtEndValue);
+            this.Controls.Add(this.txtStartValue);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnCalculate);
             this.Name = "Form1";
@@ -112,9 +112,9 @@
 
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtStartValue;
+        private System.Windows.Forms.TextBox txtEndValue;
+        private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.Label label1;
     }
 }

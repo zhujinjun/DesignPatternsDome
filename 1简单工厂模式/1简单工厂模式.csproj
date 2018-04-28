@@ -51,6 +51,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ICalculatingOperation.cs" />
+    <Compile Include="OperationAdd.cs" />
+    <Compile Include="OperationDiv.cs" />
+    <Compile Include="OperationMultiplication.cs" />
+    <Compile Include="OperationSubtract.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

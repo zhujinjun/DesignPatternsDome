@@ -25,8 +25,9 @@ namespace _1简单工厂模式
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCalculate_Click(object sender, EventArgs e)
-        {
-
+        {            
+            var startValue = txtStartValue.Text.Trim();
+            var endValue = txtEndValue.Text.Trim();
         }
     }
 }
