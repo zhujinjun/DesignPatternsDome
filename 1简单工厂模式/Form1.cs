@@ -28,6 +28,24 @@ namespace _1简单工厂模式
         {            
             var startValue = txtStartValue.Text.Trim();
             var endValue = txtEndValue.Text.Trim();
+            var comOperator = Com_Operator.Text;
+            double result =0;
+            switch (comOperator)
+            {
+                case "+":
+                    result = new OperationAdd().Calculate();                    
+                    break;
+                case "-":
+                    result = new OperationSubtract().Calculate();
+                    break;
+                case "*":
+                    result = new OperationMultiplication().Calculate();
+                    break;
+                case "/":
+                    result = new OperationDiv().Calculate();
+                    break;
+            }
+            txtResult.Text = result.ToString();
         }
     }
 }

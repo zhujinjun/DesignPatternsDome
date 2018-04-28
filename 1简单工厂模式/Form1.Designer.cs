@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Com_Operator = new System.Windows.Forms.ComboBox();
             this.txtStartValue = new System.Windows.Forms.TextBox();
             this.txtEndValue = new System.Windows.Forms.TextBox();
             this.txtResult = new System.Windows.Forms.TextBox();
@@ -46,19 +46,19 @@
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // comboBox1
+            // Com_Operator
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Com_Operator.FormattingEnabled = true;
+            this.Com_Operator.Items.AddRange(new object[] {
             "+",
             "-",
             "*",
             "/"});
-            this.comboBox1.Location = new System.Drawing.Point(201, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(36, 20);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "+";
+            this.Com_Operator.Location = new System.Drawing.Point(201, 82);
+            this.Com_Operator.Name = "Com_Operator";
+            this.Com_Operator.Size = new System.Drawing.Size(36, 20);
+            this.Com_Operator.TabIndex = 1;
+            this.Com_Operator.Text = "+";
             // 
             // txtStartValue
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.txtEndValue);
             this.Controls.Add(this.txtStartValue);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Com_Operator);
             this.Controls.Add(this.btnCalculate);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -111,7 +111,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Com_Operator;
         private System.Windows.Forms.TextBox txtStartValue;
         private System.Windows.Forms.TextBox txtEndValue;
         private System.Windows.Forms.TextBox txtResult;
