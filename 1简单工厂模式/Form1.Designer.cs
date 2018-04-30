@@ -76,6 +76,7 @@
             // 
             // txtResult
             // 
+            this.txtResult.Enabled = false;
             this.txtResult.Location = new System.Drawing.Point(122, 38);
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(195, 21);

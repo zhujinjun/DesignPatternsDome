@@ -54,6 +54,7 @@
     <Compile Include="ICalculatingOperation.cs" />
     <Compile Include="OperationAdd.cs" />
     <Compile Include="OperationDiv.cs" />
+    <Compile Include="OperationFactory.cs" />
     <Compile Include="OperationMultiplication.cs" />
     <Compile Include="OperationSubtract.cs" />
     <Compile Include="Program.cs" />

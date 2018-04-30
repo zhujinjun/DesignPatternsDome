@@ -15,6 +15,8 @@ namespace _1简单工厂模式
         public double EndValue { get; set; }
         public double Calculate()
         {
+            if (EndValue == 0)
+                throw new Exception("除数不能为0");
             return StartValue/EndValue;
         }
     }

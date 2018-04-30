@@ -25,26 +25,24 @@ namespace _1简单工厂模式
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCalculate_Click(object sender, EventArgs e)
-        {            
-            var startValue = txtStartValue.Text.Trim();
-            var endValue = txtEndValue.Text.Trim();
-            var comOperator = Com_Operator.Text;
-            double result =0;
-            switch (comOperator)
+        {    
+            double startValue =0;
+            if (!double.TryParse(txtStartValue.Text.Trim(), out startValue))
             {
-                case "+":
-                    result = new OperationAdd().Calculate();                    
-                    break;
-                case "-":
-                    result = new OperationSubtract().Calculate();
-                    break;
-                case "*":
-                    result = new OperationMultiplication().Calculate();
-                    break;
-                case "/":
-                    result = new OperationDiv().Calculate();
-                    break;
+                MessageBox.Show("输入的第一个计算内容有误，请重新输入!");
+                return;
+            }            
+            double endValue=0;
+            if (!double.TryParse(txtEndValue.Text.Trim(), out endValue))
+            {
+                MessageBox.Show("输入的第二个计算内容有误，请重新输入!");
+                return;
             }
+            var comOperator = Com_Operator.Text;
+            var oper= OperationFactory.CreateOperation(comOperator);
+            oper.StartValue = startValue;
+            oper.EndValue = endValue;
+            var result=oper.Calculate();
             txtResult.Text = result.ToString();
         }
     }
