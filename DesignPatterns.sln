@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1简单工厂模式", "1简单工厂模式\1简单工厂模式.csproj", "{813D938C-97F2-46CF-8DBD-3F59C4A2EA25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2StrategyPatterns", "2StrategyPatterns\2StrategyPatterns.csproj", "{BF9B94C1-8595-4763-AE44-F0B722DD3CB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{813D938C-97F2-46CF-8DBD-3F59C4A2EA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{813D938C-97F2-46CF-8DBD-3F59C4A2EA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{813D938C-97F2-46CF-8DBD-3F59C4A2EA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9B94C1-8595-4763-AE44-F0B722DD3CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9B94C1-8595-4763-AE44-F0B722DD3CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9B94C1-8595-4763-AE44-F0B722DD3CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9B94C1-8595-4763-AE44-F0B722DD3CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
