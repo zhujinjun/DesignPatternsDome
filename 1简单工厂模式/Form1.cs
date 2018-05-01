@@ -45,5 +45,10 @@ namespace _1简单工厂模式
             var result=oper.Calculate();
             txtResult.Text = result.ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

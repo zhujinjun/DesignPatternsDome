@@ -32,13 +32,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.labTotalPrice = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtCount = new System.Windows.Forms.TextBox();
-            this.comCalculationType = new System.Windows.Forms.ComboBox();
+            this.comSettlementType = new System.Windows.Forms.ComboBox();
             this.txtDetail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.labTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOK
@@ -49,6 +50,7 @@
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "确 定";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label1
             // 
@@ -75,18 +77,18 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 3;
-            this.label3.Text = "计算方式：";
+            this.label3.Text = "结算方式：";
             // 
-            // labTotalPrice
+            // lbl
             // 
-            this.labTotalPrice.AutoSize = true;
-            this.labTotalPrice.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labTotalPrice.ForeColor = System.Drawing.Color.Red;
-            this.labTotalPrice.Location = new System.Drawing.Point(66, 298);
-            this.labTotalPrice.Name = "labTotalPrice";
-            this.labTotalPrice.Size = new System.Drawing.Size(69, 19);
-            this.labTotalPrice.TabIndex = 4;
-            this.labTotalPrice.Text = "总计：";
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl.ForeColor = System.Drawing.Color.Red;
+            this.lbl.Location = new System.Drawing.Point(38, 301);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(69, 19);
+            this.lbl.TabIndex = 4;
+            this.lbl.Text = "总计：";
             // 
             // btnReset
             // 
@@ -111,18 +113,19 @@
             this.txtCount.Size = new System.Drawing.Size(182, 21);
             this.txtCount.TabIndex = 7;
             // 
-            // comCalculationType
+            // comSettlementType
             // 
-            this.comCalculationType.FormattingEnabled = true;
-            this.comCalculationType.Items.AddRange(new object[] {
-            "正常计算",
-            "九折计算",
-            "八折计算",
-            "五折计算"});
-            this.comCalculationType.Location = new System.Drawing.Point(124, 122);
-            this.comCalculationType.Name = "comCalculationType";
-            this.comCalculationType.Size = new System.Drawing.Size(182, 20);
-            this.comCalculationType.TabIndex = 8;
+            this.comSettlementType.FormattingEnabled = true;
+            this.comSettlementType.Items.AddRange(new object[] {
+            "正常结算",
+            "九折结算",
+            "八折结算",
+            "五折结算"});
+            this.comSettlementType.Location = new System.Drawing.Point(124, 122);
+            this.comSettlementType.Name = "comSettlementType";
+            this.comSettlementType.Size = new System.Drawing.Size(182, 20);
+            this.comSettlementType.TabIndex = 8;
+            this.comSettlementType.Text = "正常结算";
             // 
             // txtDetail
             // 
@@ -141,24 +144,37 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "明细：";
             // 
+            // labTotal
+            // 
+            this.labTotal.AutoSize = true;
+            this.labTotal.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labTotal.ForeColor = System.Drawing.Color.Black;
+            this.labTotal.Location = new System.Drawing.Point(120, 301);
+            this.labTotal.Name = "labTotal";
+            this.labTotal.Size = new System.Drawing.Size(53, 19);
+            this.labTotal.TabIndex = 10;
+            this.labTotal.Text = "0.00";
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 351);
+            this.Controls.Add(this.labTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDetail);
-            this.Controls.Add(this.comCalculationType);
+            this.Controls.Add(this.comSettlementType);
             this.Controls.Add(this.txtCount);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.labTotalPrice);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Name = "Form";
             this.Text = "收银系统";
+            this.Load += new System.EventHandler(this.Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,13 +186,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labTotalPrice;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtCount;
-        private System.Windows.Forms.ComboBox comCalculationType;
+        private System.Windows.Forms.ComboBox comSettlementType;
         private System.Windows.Forms.TextBox txtDetail;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labTotal;
     }
 }
 
