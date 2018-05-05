@@ -12,17 +12,9 @@ namespace _2StrategyPatterns
     public interface ISettlement
     {
         /// <summary>
-        /// 单价
-        /// </summary>
-        double Price { get; set; }
-        /// <summary>
-        /// 数量
-        /// </summary>
-        int Count { get; set; }
-        /// <summary>
         /// 获取总价
         /// </summary>
         /// <returns></returns>
-        double GetTotal();
+        double GetTotal(double money);
     }
 }

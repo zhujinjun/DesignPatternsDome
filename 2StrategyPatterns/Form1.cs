@@ -40,14 +40,27 @@ namespace _2StrategyPatterns
                 return;
             }
             var settlType = this.comSettlementType.Text;
-            var settlement = SettleFactory.CreatSettlement(settlType);
-            if (settlement != null)
-            {
-                settlement.Price = price;
-                settlement.Count = count;
-                var total = settlement.GetTotal();
-                labTotal.Text = total.ToString();
-            }
+            
+            /*
+             * 简单工厂模式（工厂类与抽象类之间属于关联关系）
+             * 1、此处你需要认识工厂类（SettleFactory）和抽象类（ISettlement）耦合性比较强
+             */
+            //ISettlement settlement = SettleFactory.CreatSettlement(settlType);
+            //if (settlement != null)
+            //{
+            //    settlement.Price = price;
+            //    settlement.Count = count;
+            //    var total = settlement.GetTotal();
+            //    labTotal.Text = total.ToString();
+            //}
+            
+            /*
+             * 工厂模式加策略模式
+             */
+
+            var settleContext = new SettleContext(settlType);
+            double money = price * count;
+            labTotal.Text = settleContext.ContextInterface(money).ToString();
         }
     }
 }

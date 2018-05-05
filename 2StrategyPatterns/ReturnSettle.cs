@@ -25,26 +25,18 @@ namespace _2StrategyPatterns
             this.moneyReturn = moneyReturn;
         }
         /// <summary>
-        /// 单价
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// 数量
-        /// </summary>
-        public int Count { get; set; }
-        /// <summary>
         /// 获取总价
         /// </summary>
         /// <returns></returns>
-        public double GetTotal()
+        public double GetTotal(double money)
         {            
-            var money=Price * Count;
-            if (money > moneyCondition)
+            var result = money;
+            if (result >= moneyCondition)
             {
-                money-=moneyReturn;
+                result -= moneyReturn;
                 //money = money- Math.Floor(money / moneyCondition) * moneyReturn;
             }
-            return money;
+            return result;
         }
     }
 }
