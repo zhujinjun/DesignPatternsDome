@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace _2StrategyPatterns
 {
     /// <summary>
-    /// 结算
+    /// 结算接口
     /// </summary>
     public interface ISettlement
     {

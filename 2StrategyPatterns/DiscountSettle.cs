@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace _2StrategyPatterns
 {
+    /// <summary>
+    /// 打折结算
+    /// </summary>
     public class DiscountSettle: ISettlement
     {
+        /// <summary>
+        /// 打折金额
+        /// </summary>
+        private double moneyDiscount;
+        public DiscountSettle(double moneyDiscount)
+        {
+            this.moneyDiscount = moneyDiscount;
+        }
         /// <summary>
         /// 单价
         /// </summary>
@@ -22,7 +33,7 @@ namespace _2StrategyPatterns
         /// <returns></returns>
         public double GetTotal()
         {
-            return Price * Count * 0.08;
+            return Price * Count * moneyDiscount;
         }
     }
 }

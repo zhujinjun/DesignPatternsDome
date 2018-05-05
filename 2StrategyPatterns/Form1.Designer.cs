@@ -118,9 +118,8 @@
             this.comSettlementType.FormattingEnabled = true;
             this.comSettlementType.Items.AddRange(new object[] {
             "正常结算",
-            "九折结算",
             "八折结算",
-            "五折结算"});
+            "满300减100"});
             this.comSettlementType.Location = new System.Drawing.Point(124, 122);
             this.comSettlementType.Name = "comSettlementType";
             this.comSettlementType.Size = new System.Drawing.Size(182, 20);

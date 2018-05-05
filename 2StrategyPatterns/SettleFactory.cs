@@ -23,7 +23,10 @@ namespace _2StrategyPatterns
                     settlement = new NormalSettle();
                     break;
                 case "八折结算":
-                    settlement = new DiscountSettle();
+                    settlement = new DiscountSettle(0.8);
+                    break;
+                case "满300减100":
+                    settlement = new ReturnSettle(300,100);
                     break;
             }
             return settlement;
