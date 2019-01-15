@@ -11,21 +11,9 @@ namespace _2StrategyPatterns
     /// </summary>
     public class NormalSettle: ISettlement
     {
-        /// <summary>
-        /// 单价
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// 数量
-        /// </summary>
-        public int Count { get; set; }
-        /// <summary>
-        /// 获取总价
-        /// </summary>
-        /// <returns></returns>
-        public double GetTotal()
+        public double GetTotal(double money)
         {
-            return Price* Count;
+            return money;
         }
     }
 }

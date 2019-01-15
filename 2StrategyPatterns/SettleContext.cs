@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 namespace _2StrategyPatterns
 {
     /// <summary>
-    /// 结算工厂类
+    /// 结算上下文，用于配置和维护ISettlement接口
+    /// 此处用到了工程模式和策略模式
     /// </summary>
-    public class SettleFactory
+    public class SettleContext
     {
-        /// <summary>
-        /// 创建结算方式
-        /// </summary>
-        public static ISettlement CreatSettlement(string settlType)
+        private ISettlement settlement;
+        public SettleContext(string settlType)
         {
-            ISettlement settlement = null;
+            ISettlement settlement=null;
             switch (settlType)
             {
                 case "正常结算":
@@ -26,10 +25,14 @@ namespace _2StrategyPatterns
                     settlement = new DiscountSettle(0.8);
                     break;
                 case "满300减100":
-                    settlement = new ReturnSettle(300,100);
+                    settlement = new ReturnSettle(300, 100);
                     break;
             }
-            return settlement;
+            this.settlement = settlement;
+        }
+        public double ContextInterface(double money)
+        {
+            return settlement.GetTotal(money);
         }
     }
 }
