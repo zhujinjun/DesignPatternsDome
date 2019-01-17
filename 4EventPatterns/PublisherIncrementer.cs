@@ -22,6 +22,7 @@ namespace _4EventPatterns
             {
                 if (i % 12 == 0 && CountedADozen != null)
                 {
+                    //触发事件代码
                     CountedADozen();
                 }
             }

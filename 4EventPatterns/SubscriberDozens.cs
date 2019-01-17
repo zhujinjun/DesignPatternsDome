@@ -15,7 +15,7 @@ namespace _4EventPatterns
         public SubscriberDozens(PublisherIncrementer incrementer)
         {
             DozensCount = 0;
-            incrementer.CountedADozen += IncrementDozensCount;   //订阅事件
+            incrementer.CountedADozen +=new Handler(IncrementDozensCount);   //订阅事件
         }
         void IncrementDozensCount()
         {
