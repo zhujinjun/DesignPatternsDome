@@ -24,16 +24,14 @@ namespace _1简单工厂模式
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCalculate_Click(object sender, EventArgs e)
-        {    
-            double startValue =0;
-            if (!double.TryParse(txtStartValue.Text.Trim(), out startValue))
+        private void BtnCalculate_Click(object sender, EventArgs e)
+        {
+            if (!double.TryParse(txtStartValue.Text.Trim(), out double startValue))
             {
                 MessageBox.Show("输入的第一个计算内容有误，请重新输入!");
                 return;
-            }            
-            double endValue=0;
-            if (!double.TryParse(txtEndValue.Text.Trim(), out endValue))
+            }
+            if (!double.TryParse(txtEndValue.Text.Trim(), out double endValue))
             {
                 MessageBox.Show("输入的第二个计算内容有误，请重新输入!");
                 return;

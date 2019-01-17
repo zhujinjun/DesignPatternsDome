@@ -44,7 +44,7 @@
             this.btnCalculate.TabIndex = 0;
             this.btnCalculate.Text = "计 算";
             this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
             // Com_Operator
             // 

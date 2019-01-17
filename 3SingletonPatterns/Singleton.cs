@@ -20,6 +20,7 @@ namespace _3SingletonPatterns
         {
 
         }
+
         /// <summary>
         /// 外部唯一能够访问实例的地方
         /// </summary>
