@@ -15,11 +15,14 @@ namespace _4EventPatterns
         public SubscriberDozens(PublisherIncrementer incrementer)
         {
             DozensCount = 0;
-            incrementer.CountedADozen +=new Handler(IncrementDozensCount);   //订阅事件
+            //incrementer.CountedADozen +=new Handler(IncrementDozensCount);   //订阅事件
+            incrementer.CountedADozen += IncrementDozensCount;
         }
-        void IncrementDozensCount()
+
+        void IncrementDozensCount(object sender, IncrementerEventArgs e)
         {
-            DozensCount++;    //声明事件处理
+            Console.WriteLine("被整出的值：{0}",e.IterationCount);
+            DozensCount++;    //事件处理
         }
     }
 }
